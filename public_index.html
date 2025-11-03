@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Iframe Generator — iframegenerator.xyz</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Iframe Generator</h1>
+    <form id="genForm">
+      <label>
+        Source URL (src)
+        <input type="url" id="src" name="src" placeholder="https://example.com" required value="https://iframegenerator.xyz/sample">
+      </label>
+      <div class="row">
+        <label>
+          Width
+          <input type="text" id="width" name="width" value="600">
+        </label>
+        <label>
+          Height
+          <input type="text" id="height" name="height" value="400">
+        </label>
+      </div>
+      <div class="row">
+        <label>
+          Frameborder
+          <input type="text" id="frameborder" name="frameborder" value="0">
+        </label>
+        <label>
+          Allow fullscreen
+          <select id="allowfullscreen" name="allowfullscreen">
+            <option value="true" selected>Yes</option>
+            <option value="false">No</option>
+          </select>
+        </label>
+      </div>
+      <div class="actions">
+        <button type="submit">Generate</button>
+        <button type="button" id="copyBtn">Copy HTML</button>
+      </div>
+    </form>
+
+    <section class="output">
+      <h2>Preview</h2>
+      <div id="preview" class="preview">
+        <!-- preview inserted here -->
+      </div>
+
+      <h2>Generated HTML</h2>
+      <pre id="generated" class="generated">&lt;!-- your generated iframe will appear here --&gt;</pre>
+      <div id="backlink" class="backlink">
+        <!-- backlink will appear here -->
+        <a href="https://iframegenerator.xyz" target="_blank" rel="noopener noreferrer">Powered by iframegenerator.xyz</a>
+      </div>
+    </section>
+
+    <footer>
+      <small>Made with ♥ — <a href="https://iframegenerator.xyz" target="_blank" rel="noopener noreferrer">iframegenerator.xyz</a></small>
+    </footer>
+  </main>
+
+  <script src="/script.js"></script>
+</body>
+</html>
